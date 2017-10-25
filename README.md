@@ -1,5 +1,5 @@
-# ldapauthenticator
-Simple LDAP Authenticator Plugin for JupyterHub
+# tokenauthenticator
+Addition Token Authenticator Plugin for JupyterHub
 
 ## Installation ##
 
@@ -21,7 +21,7 @@ You can enable this authenticator with the folling lines in your
 `jupyter_config.py`:
 
 ```python
-c.JupyterHub.authenticator_class = 'tokenauhenticator.TOKENAuthenticator'
+c.JupyterHub.authenticator_class = 'tokenauthenticator.TOKENAuthenticator'
 ```
 
 ### Required configuration ###
@@ -30,6 +30,11 @@ At least the following two configuration options must be set before
 the LDAP Authenticator can be used:
 
 #### `TOKENAuthenticator.server_url` ####
+
+Address of the CROWD Server to contact. Just use a bare hostname or IP,
+without a port name or protocol prefix.
+
+#### `TOKENAuthenticator.token_server_url` ####
 
 Address of the TOKEN Server to contact. Just use a bare hostname or IP,
 without a port name or protocol prefix.
